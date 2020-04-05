@@ -14,7 +14,7 @@ import { eventBus } from '../main.js';
 export default {
     name: 'house-detail',
     props: ['house'],
-    mehthods: {
+    methods: {
         handleButton(){
             eventBus.$emit('favourite-house', this.house.name)
         }

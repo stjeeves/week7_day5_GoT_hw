@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="main-container">
     <h1>The Hooses o' Westeros</h1>
     <houses-list :houses="houses"></houses-list>
     <house-detail :house="selectedHouse"></house-detail>
@@ -24,7 +24,7 @@ export default {
   },
 
   mounted(){
-    fetch('https://www.anapioficeandfire.com/api/houses')
+    fetch('https://www.anapioficeandfire.com/api/houses?pageSize=50&hasWords=true')
     .then(result => result.json())
     .then(houses => this.houses = houses)
 
@@ -55,6 +55,8 @@ export default {
 </script>
 
 <style scoped>
-
+  .main-container {
+    display: flex;
+  }
 
 </style>
