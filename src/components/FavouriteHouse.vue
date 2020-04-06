@@ -1,5 +1,5 @@
 <template>
-  <div v-if="house">
+  <div class="favourite-house" v-if="house">
       <h1>You have chosen to join:</h1>
       <h2 v-for="(house, index) in house" :house="house" :key="index">{{house}}</h2>
       <p>Remember, in the game of thrones, you win or you die.</p>
@@ -18,6 +18,9 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style scoped>  
+    /* .favourite-house {
+        display: flex;
+        ord
+    } */
 </style>
